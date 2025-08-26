@@ -97,6 +97,15 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+      <a 
+        href="/MustafaAsifResume.pdf" 
+        // download="Mustafa_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+        Resume 
+      </a>
+
       </footer>
     </div>
   );
