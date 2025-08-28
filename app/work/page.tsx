@@ -58,7 +58,7 @@ export default function WorkPage() {
       </section>
     </main>
       <Footer />
-            </>
+     </>
   );
 }
 
