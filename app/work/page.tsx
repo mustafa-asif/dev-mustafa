@@ -1,6 +1,7 @@
 
-
 "use client";
+import { Navbar } from "@/components/Navbar/page";
+import { Footer } from "@/components/Footer/page";
 
 
 export default function WorkPage() {
@@ -15,6 +16,8 @@ export default function WorkPage() {
   ];
 
   return (
+    <>
+      <Navbar />
     <main className="min-h-screen bg-gray-50 text-gray-900 px-6 py-10">
       {/* Page Header */}
       <section className="text-center mb-10">
@@ -54,6 +57,8 @@ export default function WorkPage() {
         ))}
       </section>
     </main>
+      <Footer />
+            </>
   );
 }
 
