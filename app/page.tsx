@@ -5,13 +5,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar/page';
 import { Footer } from '@/components/Footer/page';
+import { LinkIcon } from '@heroicons/react/24/outline';
+
 
 
 
 export default function LandingPage() {
+ 
+
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900 px-6">
+    <>
       <Navbar />
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-gray-900 px-6">
       
       {/* Hero Section */}
       <section className="text-center max-w-2xl mt-16">
@@ -45,20 +50,31 @@ export default function LandingPage() {
       <section className="mt-20 text-center max-w-4xl">
         <h2 className="text-3xl font-semibold mb-8">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-4 bg-white shadow rounded-xl">
-            <Image src="/images/project1.png" alt="Project 1" width={400} height={250} className="rounded-lg" />
-            <h3 className="mt-4 font-semibold">Project One</h3>
-            <p className="text-gray-500 text-sm">A Next.js and TailwindCSS project showcasing modern UI design.</p>
+          <div className="p-4 bg-white shadow rounded-xl hover:shadow-xl">
+            <Image src="/CMS.jpg" alt="Project 1" width={400} height={250} className="rounded-lg aspect-square" />
+            <h3 className="mt-4 font-semibold">Course Management System</h3>
+            <p className="text-gray-500 text-sm">A Full Stack based app that lets you enroll Students,assign teachers and register Courses</p>
+            <Link href="https://course-mangement-system-seven.vercel.app/">
+             <LinkIcon className="h-6 w-6 text-gray-500 hover:text-shadow-gray-400 trasition" />
+            </Link>
           </div>
-          <div className="p-4 bg-white shadow rounded-xl">
-            <Image src="/images/project2.png" alt="Project 2" width={400} height={250} className="rounded-lg" />
-            <h3 className="mt-4 font-semibold">Project Two</h3>
+
+          <div className="p-4 bg-white shadow rounded-xl hover:shadow-xl">
+            <Image src="/Fit.jpg" alt="Project 2" width={400} height={250} className="rounded-lg aspect-square "  />
+            <h3 className="mt-4 font-semibold">Fit Track Pro</h3>
             <p className="text-gray-500 text-sm">MERN stack app with authentication and dashboard features.</p>
+             <Link href="https://health-trainer-project-mern.vercel.app/">
+              <LinkIcon className="h-6 w-6 text-gray-500 hover:text-shadow-gray-400 trasition" />
+            </Link>
           </div>
-          <div className="p-4 bg-white shadow rounded-xl">
-            <Image src="/images/project3.png" alt="Project 3" width={400} height={250} className="rounded-lg" />
-            <h3 className="mt-4 font-semibold">Project Three</h3>
-            <p className="text-gray-500 text-sm">Portfolio website built with Next.js and deployed on Vercel.</p>
+
+          <div className="p-4 bg-white shadow rounded-xl hover:shadow-xl">
+            <Image src="/dashboard.jpg" alt="Project 3" width={400} height={250} className="rounded-lg aspect-square" />
+            <h3 className="mt-4 font-semibold">Next.js Dashboard</h3>
+            <p className="text-gray-500 text-sm">A Next.js and TailwindCSS project.</p>
+             <Link href="https://nextjs-dashboard-practice-murex.vercel.app/">
+              <LinkIcon className="h-6 w-6 text-gray-500 text-center   hover:text-gray-400 trasition" />
+            </Link>
           </div>
         </div>
       </section>
@@ -74,8 +90,9 @@ export default function LandingPage() {
         </Link>
       </section>
 
-      <Footer />
     </main>
+      <Footer />
+    </>
   );
 }
 
