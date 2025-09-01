@@ -11,7 +11,7 @@ import { LinkIcon } from "@heroicons/react/24/solid";
 
 
 export default function Page() {
-  const projects=[
+   const projects=[
     {
 
       title:"Course Management System",
@@ -40,6 +40,8 @@ export default function Page() {
     },
 
   ]
+
+
 
   
 
