@@ -11,9 +11,10 @@ const navigation = [
   { name: 'Contact', href: '/contacts', current: false },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+function classNames(...classes: (string | undefined | null | false)[]): string {
+  return classes.filter(Boolean).join(' ');
 }
+
 
 export  function Navbar() {
   return (
